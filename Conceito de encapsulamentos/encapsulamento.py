@@ -1,8 +1,8 @@
 class BombaCombustivel:
-    def __init__(self, tipoCombustivel, valorLitro, qtdCombustivel):
+    def __init__(self, tipoCombustivel, valorLitro, quantidadeCombustivel):
         self.tipoCombustivel = tipoCombustivel
         self.valorLitro = valorLitro
-        self.quantidadeCombustivel = qtdCombustivel
+        self.quantidadeCombustivel = quantidadeCombustivel
     
     def abastecerPorValor(self,valor):
         litrosAbastecidos = valor / self.valorLitro
@@ -22,15 +22,18 @@ class BombaCombustivel:
         
     def alterarValor(self, novoValorLitro):
         self.valorLitro = novoValorLitro
+        print("Valor alterado para:", self.valorLitro)
 
     def alterarCombustivel(self, novoTipoCombustivel):
         self.tipoCombustivel = novoTipoCombustivel
+        print("Novo tipo de combustivel:", self.tipoCombustivel)
     
     def alterarQuantidadeCombustivel(self, novaQuantidadeCombustivel):
         self.quantidadeCombustivel = novaQuantidadeCombustivel
+        print("Quantidade de combustivel na bomba alterada para:",self.quantidadeCombustivel)
     
 
-bomba = BombaCombustivel(["Comum, Aditivada, Premium"], 4.50, qtdCombustivel = float(input("Digite a quantidade  de Combustivel da bomba: ")))
+bomba = BombaCombustivel(["Comum, Aditivada, Premium"], 4.50, quantidadeCombustivel = float(input("Digite a quantidade  de Combustivel da bomba: ")))
 
 print("\n---BOMBA DE COMBUSTIVEL---\n")
 print("Tipos de Combustivel: {}\nPreço por litro: {}\nQuantidade de gasolina na bomba: {}".format(bomba.tipoCombustivel, bomba.valorLitro, bomba.quantidadeCombustivel))
@@ -42,10 +45,7 @@ elif(opc == 2):
     bomba.abastecerPorLitro(float(input("Digite a quantidade de litros: ")))
 elif(opc == 3):
     bomba.alterarValor(float(input("Digite um novo valor para o litro: ")))
-    print("Valor alterado!",bomba.valorLitro)
 elif(opc == 4):
     bomba.alterarCombustivel(str(input("Digite o novo tipo de combustivel: ")))
-    print("Novo valor adicionado:",bomba.tipoCombustivel)
 elif(opc == 5):
     bomba.alterarQuantidadeCombustivel(float(input("Digite a nova quantidade de combustivel: ")))
-    print("Quantidade de combustivel na bomba:",bomba.quantidadeCombustivel)
