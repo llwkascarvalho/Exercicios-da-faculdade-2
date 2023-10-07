@@ -1,0 +1,13 @@
+Classe Bomba de Combustivel: Faça um programa completo utilizando classes e métodos que: 
+    Possua uma classe chamada BombaCombustivel, com no minimo esses atributos:
+        • tipoCombustivel
+        • valorLitro
+        • quantidade Combustivel
+    Possua no minimo esses métodos:
+        • abastecerPorValor() - método onde é informado o valor a ser abastecido e mostra a quantidade de litros que foi colocada no veículo
+        • abastecerPorLitro() - método onde é informado a quantidade em litros de combustivel e mostra o valor a ser pago pelo cliente.
+        • alterarValor() - altera o valor do litro do combustivel
+        • alterarCombustivel() - altera o tipo do combustivel 
+        • alterarQuantidadeCombustivel() - altera a quantidade de combustivel total na bomba.
+
+OBS: Sempre que acontecer um abastecimento é nescessario atualizar a quantidade de combustivel na bomba.
