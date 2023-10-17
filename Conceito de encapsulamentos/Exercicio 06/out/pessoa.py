@@ -42,7 +42,14 @@ class Jogador:
         self.calcular_idade_aposentadoria()
         print(f"\nNome do jogador: {self.nome}\nPosição: {self.get_posicao()}\nNascimento: {self.get_nascimento()}\nNacionalidade: {self.nacionalidade}\nAltura: {self.altura}\nPeso: {self.peso}\nIdade: {self.idade}\nIdade de aposentadoria: {self.idade_aposentadoria}\nAnos restantes até a aposentadoria: {self.idade_restante}\n")
 
-jogador = Jogador(nome = 'Lwkas', posicao='Zagueiro', nascimento= 2004, nacionalidade='Brasileiro', altura=1.60,peso=58)
+nome = input("Nome do jogador: ")
+posicao = input("Posição do jogador: ")
+nascimento = int(input("Ano de nascimento: "))
+nacionalidade = input("Nacionalidade: ")
+altura = float(input("Altura: "))
+peso = float(input("Peso: "))
+
+jogador = Jogador(nome, posicao, nascimento, nacionalidade, altura, peso)
 
 opc = int(input(("\nO QUE DESEJA FAZER?\n1- Calcular idade.\n2- Calcular idade até aposentadoria.\n3- Exibir informações do jogador.\n")))
 if opc == 1:
