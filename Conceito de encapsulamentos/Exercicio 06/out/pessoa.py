@@ -36,11 +36,11 @@ class Jogador:
         self.calcular_idade()
         self.idade_restante = self.idade - self.idade_aposentadoria
             
-
     def exibir(self):
         self.calcular_idade()
         self.calcular_idade_aposentadoria()
         print(f"\nNome do jogador: {self.nome}\nPosição: {self.get_posicao()}\nNascimento: {self.get_nascimento()}\nNacionalidade: {self.nacionalidade}\nAltura: {self.altura}\nPeso: {self.peso}\nIdade: {self.idade}\nIdade de aposentadoria: {self.idade_aposentadoria}\nAnos restantes até a aposentadoria: {self.idade_restante}\n")
+
 
 nome = input("Nome do jogador: ")
 posicao = input("Posição do jogador: ")
@@ -51,14 +51,23 @@ peso = float(input("Peso: "))
 
 jogador = Jogador(nome, posicao, nascimento, nacionalidade, altura, peso)
 
-opc = int(input(("\nO QUE DESEJA FAZER?\n1- Calcular idade.\n2- Calcular idade até aposentadoria.\n3- Exibir informações do jogador.\n")))
-if opc == 1:
-    jogador.calcular_idade()
-    print(f"Idade: {jogador.idade}")
-elif (opc == 2):
-    print("\nDefesa - 40 anos\nMeio-campo - 38 anos\nAtacante 35 anos.")
-    jogador.set_posicao(str(input("Digite a posição: ")))
-    jogador.calcular_idade_aposentadoria()
-    print(f"Faltam {jogador.idade_restante} anos até a aposentadoria.\nVocê possui {jogador.idade}")
-elif(opc == 3):
-    jogador.exibir()
+while True:
+
+    opc = int(input(("\nO QUE DESEJA FAZER?\n1- Calcular idade.\n2- Calcular idade até aposentadoria.\n3- Exibir informações do jogador.\n4- Parar execucção.")))
+
+    if opc == 1:
+        jogador.calcular_idade()
+        print(f"Idade: {jogador.idade}")
+
+    elif (opc == 2):
+        print("\nDefesa - 40 anos\nMeio-campo - 38 anos\nAtacante 35 anos.")
+        jogador.set_posicao(str(input("Digite a posição: ")))
+        jogador.calcular_idade_aposentadoria()
+        print(f"Faltam {jogador.idade_restante} anos até a aposentadoria.\nVocê possui {jogador.idade}")
+
+    elif(opc == 3):
+        jogador.exibir()
+        
+    elif(opc == 4):
+        print("Fim")
+        break
