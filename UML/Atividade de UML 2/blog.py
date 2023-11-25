@@ -9,7 +9,7 @@ class Blog:
         pass
 
     def apagarPostagem():
-
+        pass
 
 class Postagem:
     def __init__(self) -> None:
