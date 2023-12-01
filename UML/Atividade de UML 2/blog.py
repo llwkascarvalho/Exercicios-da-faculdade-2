@@ -24,7 +24,7 @@ class Postagem:
         #fazer gets e sets
 
 class MixinAutenticavel: 
-    def autenticar(usuario, loginDigitado, senhaDigitado):
+    def autenticar(self, usuario, loginDigitado, senhaDigitado):
         if usuario.getLogin() == loginDigitado and usuario.getLogin() == senhaDigitado:
             return True
         else:
@@ -41,7 +41,30 @@ class SistemaBlog:
     def ___init__(self, blog):
         self.__blog = blog
 
-    def autenticar(usuario, senhaDigitado, loginDigitado):
+    def autenticar(self, usuario, senhaDigitado, loginDigitado):
         return usuario.autenticar(usuario, senhaDigitado, loginDigitado)
 
+
+### Questão 2 
     
+class Pedido: 
+    def ___init__(self):
+        self.__itemPedidos = []
+        self.__valorTotal = 0
+
+    def adicionarItem(self, item):
+        self.__itemPedidos.append(item)
+    def obterTotal(self):
+        pass
+
+class ItemPedido:
+    def ___init__(self, produto, quantidade):
+        self.__produto = produto
+        self.__quantidade = quantidade
+
+class Produto:
+    def ___init__(self, codigo, valor, descricao):
+        self.__codigo = codigo
+        self.__valor = valor
+        self.__descricao = descricao
+
