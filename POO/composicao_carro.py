@@ -24,7 +24,7 @@ carro.freio.freiar()
 
 class Roda:
     def __init__(self, tamanho):
-        self.tamanho = tamanhoç
+        self.tamanho = tamanho
 
 class Carro:
     def __init__(self, modelo):
